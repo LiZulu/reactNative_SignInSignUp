@@ -1,3 +1,4 @@
+// Date: 10/12/2024
 import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Animated, { FadeIn, FadeInDown, FadeInUp, FadeOut } from 'react-native-reanimated';
