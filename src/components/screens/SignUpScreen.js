@@ -11,7 +11,7 @@ export default function SignUpScreen() {
     <View style={styles.container}>
       <Image
         style={styles.backgroundImg}
-        source={require('../../assets/images/christmas3.png')} />
+        source={require('../../assets/images/workout2.png')} />
 
         {/** Snowflakes **/}
         <View style={styles.iconContainer}>

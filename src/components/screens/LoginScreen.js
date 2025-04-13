@@ -1,4 +1,3 @@
-// Date: 10/12/2024
 import { View, Text, Image, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Animated, { FadeIn, FadeInDown, FadeInUp, FadeOut } from 'react-native-reanimated';
@@ -12,16 +11,16 @@ export default function LoginScreen() {
     <View style={styles.container}>
       <Image
         style={styles.backgroundImg}
-        source={require('../../assets/images/christmas3.png')} />
+        source={require('../../assets/images/workout2.png')} />
 
         {/** Snowflakes **/}
         <View style={styles.iconContainer}>
             <Animated.Image entering={FadeInUp.delay(200).duration(1000).springify().damping(3)}
             style={styles.image1}
-            source={require('../../assets/images/christmas-ball.png')} />
+            source={require('../../assets/images/dumbbell.png')} />
             <Animated.Image entering={FadeInUp.delay(200).duration(1000).springify()}
             style={styles.image2}
-            source={require('../../assets/images/christmas-ball2.png')} />
+            source={require('../../assets/images/kettlebell.png')} />
         </View>
 
         {/** title and form **/}
@@ -35,26 +34,33 @@ export default function LoginScreen() {
 
             {/** form **/}
             <View style={styles.formContent2}> 
-                <Animated.View entering={FadeInUp.duration(1000).springify()} style={styles.formEmail}>
-                    <TextInput placeholder='Email' placeholderTextColor={'white'} />
+                <Animated.View entering={FadeInUp.duration(1000).springify()}>
+                    <View style={styles.formEmail}>
+                        <TextInput placeholder='Email' placeholderTextColor={'white'} />
+                    </View>
                 </Animated.View>
 
-                <Animated.View entering={FadeInUp.delay(200).springify()} style={styles.formPassword}>
-                    <TextInput placeholder='Password' placeholderTextColor={'white'} />
+                <Animated.View entering={FadeInUp.delay(200).springify()}>
+                    <View style={styles.formPassword}>
+                        <TextInput placeholder='Password' placeholderTextColor={'white'} />
+                    </View>
                 </Animated.View>
 
-                <Animated.View entering={FadeInUp.delay(400).springify()} style={styles.formButton}>
-                    <TouchableOpacity
-                        style={styles.formButtonStyle}>
+                <Animated.View entering={FadeInUp.delay(400).springify()}>
+                    <View style={styles.formButton}>
+                        <TouchableOpacity style={styles.formButtonStyle}>
                             <Text style={styles.buttonText}> Login </Text>
-                    </TouchableOpacity>
+                        </TouchableOpacity>
+                    </View>
                 </Animated.View>
 
-                <Animated.View entering={FadeInDown.delay(600).springify()} style={styles.formAccountRegister}>
-                    <Text style={styles.registerLinkText}> Dont have an account? </Text>
-                    <TouchableOpacity onPress={() => navigation.push('SignUp')}>
-                        <Text style={styles.linkSignUp}> Sign Up </Text>
-                    </TouchableOpacity>
+                <Animated.View entering={FadeInDown.delay(600).springify()}>
+                    <View style={styles.formAccountRegister}>
+                        <Text style={styles.registerLinkText}> Don't have an account? </Text>
+                        <TouchableOpacity onPress={() => navigation.push('SignUp')}>
+                            <Text style={styles.linkSignUp}> Sign Up </Text>
+                        </TouchableOpacity>
+                    </View>
                 </Animated.View>
             </View>
         </View>
@@ -73,7 +79,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '100%',
         height: '100%',
-        marginTop: -100,
+        marginTop: 0,
     },
 
     iconContainer:
@@ -82,7 +88,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%',
         position: 'absolute',
-
     },
 
     image1: {
@@ -102,8 +107,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         flex: 1,
-        justifyContent: 'center',
-        paddingBottom: 270,
+        justifyContent: 'flex-start', // Changed to flex-start to align content at the top
+        paddingBottom: 340,
     },
 
     formContent1:
@@ -118,7 +123,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginLeft: 4,
         marginRight: 4,
-        marginTop: 1, /* 16px */
+        marginTop: 10,  // Adjusted for better spacing
         letterSpacing: 4,
     },
 
@@ -127,7 +132,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         fontSize: 60,
-        marginTop: 280, // Space between the title and form
+        marginTop: 200, // Reduced margin to ensure title and form don't overlap
         letterSpacing: 4,
     },
 
@@ -159,7 +164,7 @@ const styles = StyleSheet.create({
     formButtonStyle:
     {
         width: '100%',
-        backgroundColor: '#76a797',
+        backgroundColor: '#7DF9FF',
         borderRadius: 10,
         color: 'white',
         padding: 16,
@@ -190,7 +195,7 @@ const styles = StyleSheet.create({
     linkSignUp:
     {
         fontSize: 20,
-        color: '#76a797',
+        color: '#7DF9FF',
         fontWeight: 'bold',
     }
 });
