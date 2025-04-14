@@ -36,19 +36,19 @@ export default function LoginScreen() {
             <View style={styles.formContent2}> 
                 <Animated.View entering={FadeInUp.duration(1000).springify()}>
                     <View style={styles.formUsername}>
-                        <TextInput placeholder='Username' placeholderTextColor={'white'} />
+                        <TextInput placeholder='Username' placeholderTextColor={'#444444'} />
                     </View>
                 </Animated.View>
                 
                 <Animated.View entering={FadeInUp.duration(1000).springify()}>
                     <View style={styles.formEmail}>
-                        <TextInput placeholder='Email' placeholderTextColor={'white'} />
+                        <TextInput placeholder='Email' placeholderTextColor={'#444444'} />
                     </View>
                 </Animated.View>
 
                 <Animated.View entering={FadeInUp.delay(200).springify()}>
                     <View style={styles.formPassword}>
-                        <TextInput placeholder='Password' placeholderTextColor={'white'} />
+                        <TextInput placeholder='Password' placeholderTextColor={'#444444'} />
                     </View>
                 </Animated.View>
 
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
 
     formUsername:
     {
-        backgroundColor: 'gray',
+        backgroundColor: '#D3D3D3',
         padding: 10,
         borderRadius: 16,
         width: '100%',
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
 
     formEmail:
     {
-        backgroundColor: 'gray',
+        backgroundColor: '#D3D3D3',
         padding: 10,
         borderRadius: 16,
         width: '100%',
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
 
     formPassword:
     {
-        backgroundColor: 'gray',
+        backgroundColor: '#D3D3D3',
         padding: 10,
         borderRadius: 16,
         width: '100%',
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
     {
         fontSize: 20,
         fontWeight: 'bold',
-        color: 'white',
+        color: '#444444',
         textAlign: 'center',
     },
 
